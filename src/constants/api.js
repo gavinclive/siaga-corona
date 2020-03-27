@@ -1,0 +1,1 @@
+export const KAWAL_CORONA_API = 'https://api.kawalcorona.com/'

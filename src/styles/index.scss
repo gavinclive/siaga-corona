@@ -1,0 +1,31 @@
+@import '../../node_modules/vuesax/dist/vuesax.css';
+@import '../../node_modules/bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+html {
+  font-size: 16px;
+  font-family: 'Open Sans', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+
+  button:focus {
+    outline: none !important;
+  }
+
+  .vs-navbar--title {
+    margin: 0 !important;
+  }
+
+  .num-card {
+    width: 30%;
+    cursor: initial !important;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
+
+    .vs-button-text{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
