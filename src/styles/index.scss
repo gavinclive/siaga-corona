@@ -1,5 +1,6 @@
 @import '../../node_modules/vuesax/dist/vuesax.css';
 @import '../../node_modules/bootstrap/scss/bootstrap';
+@import '../../node_modules/material-icons/iconfont/material-icons.css';
 @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
 
 html {
@@ -8,6 +9,18 @@ html {
 
   button:focus {
     outline: none !important;
+  }
+
+  .pages {
+    margin-top: 55px !important;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 40px !important;
+    }
+  }
+
+  .bg-custom {
+    background: linear-gradient(to right, #fff , #f8f9fa) !important;
   }
 
   .vs-navbar--title {
@@ -27,5 +40,81 @@ html {
       display: flex;
       justify-content: space-between;
     }
+  }
+
+  .header-table {
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
+
+      .vs-table--search {
+        width: 100%;
+        max-width: 400px !important;
+        margin: 0 auto;
+
+        input {
+          width: 100%;
+          margin-bottom: .5rem;
+        }
+      }
+
+      h3 {
+        margin: .5rem;
+      }
+    }
+
+    padding: .25rem;
+
+    h3 {
+      margin: 0;
+    }
+
+    input {
+      height: 2rem;
+      font-size: 1rem;
+      padding-left: 35px !important;
+    }
+
+    i {
+      font-size: 1.5rem;
+      top: 17.5%;
+    }
+  }
+
+  .vs-pagination--ul {
+    margin-bottom: 0;
+  }
+
+  .vs-table--tbody-table {
+    min-width: unset !important;
+  }
+
+  .vs-table--tbody {
+    overflow: hidden;
+  }
+
+  th, td {
+    padding-left: .25rem !important;
+    padding-right: .25rem !important;
+  }
+
+  .vs-card--header h3 {
+    font-size: 1.25rem;
+    height: 4.5rem;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+  }
+
+  .vs-card--footer {
+    top: 94%;
+  }
+
+  .news-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
   }
 }

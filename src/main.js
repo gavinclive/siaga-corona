@@ -9,6 +9,7 @@ import './styles/index.scss'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faProcedures, faWalking, faDizzy } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import FlagIcon from 'vue-flag-icon'
 
 library.add({
   faProcedures,
@@ -17,8 +18,7 @@ library.add({
 })
 
 Vue.component('font-awesome-icon', FontAwesomeIcon)
-
-
+Vue.use(FlagIcon)
 Vue.use(Vuesax)
 
 Vue.config.productionTip = false
