@@ -1,6 +1,7 @@
 <template>
   <div class="my-2">
     <vs-table
+      stripe
       v-if="global"
       search 
       :data="data"
@@ -30,20 +31,20 @@
         <vs-tr :key="indextr" v-for="(tr, indextr) in data" >
           <vs-td :data="data[indextr].Country_Region">
             <div class="d-flex align-items-center">
-              <flag :iso="getFlag(data[indextr].Country_Region)" :squared="false" class="mr-1"/>
+              <country-flag class="mr-1" :country="getFlag(data[indextr].Country_Region)" size="normal" />
               <span>{{ data[indextr].Country_Region }}</span>
             </div>
           </vs-td>
 
-          <vs-td :data="data[indextr].Confirmed" class="text-right">
+          <vs-td :data="data[indextr].Confirmed">
             {{data[indextr].Confirmed}}
           </vs-td>
 
-          <vs-td :data="data[indextr].Recovered" class="text-right">
+          <vs-td :data="data[indextr].Recovered">
             {{data[indextr].Recovered}}
           </vs-td>
 
-          <vs-td :data="data[indextr].Deaths" class="text-right">
+          <vs-td :data="data[indextr].Deaths">
             {{data[indextr].Deaths}}
           </vs-td>
         </vs-tr>
@@ -82,15 +83,15 @@
             {{data[indextr].Provinsi}}
           </vs-td>
 
-          <vs-td :data="data[indextr].Kasus_Posi" class="text-right">
+          <vs-td :data="data[indextr].Kasus_Posi">
             {{data[indextr].Kasus_Posi}}
           </vs-td>
 
-          <vs-td :data="data[indextr].Kasus_Semb" class="text-right">
+          <vs-td :data="data[indextr].Kasus_Semb">
             {{data[indextr].Kasus_Semb}}
           </vs-td>
 
-          <vs-td :data="data[indextr].Kasus_Meni" class="text-right">
+          <vs-td :data="data[indextr].Kasus_Meni">
             {{data[indextr].Kasus_Meni}}
           </vs-td>
         </vs-tr>
@@ -102,8 +103,14 @@
 <script>
 import { mapGetters } from 'vuex'
 import { getCode, overwrite } from 'country-list'
+import CountryFlag from 'vue-country-flag'
+
 export default {
   name: 'RegionData',
+
+  components: {
+    CountryFlag
+  },
 
   props: {
     global: {
@@ -172,7 +179,7 @@ export default {
         name: `Cote d'Ivoire`
       },
       {
-        code: 'SR',
+        code: 'XK',
         name: 'Kosovo'
       },
       {

@@ -4,7 +4,7 @@
       <div class="col-12">
         <h4>Made with</h4>
         <a href="https://vuejs.org">
-          <img src="https://vuejs.org/images/logo.png" class="d-block m-auto" width="100px">
+          <img src="../assets/logo.png" class="d-block m-auto" width="100px">
         </a>
         <h4>and also</h4>
         <a href="https://kawalcorona.com/api/">Kawal Corona API</a>
