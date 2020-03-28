@@ -53,6 +53,7 @@
 
     <vs-table
       v-else
+      stripe
       search 
       :data="data"
     >
