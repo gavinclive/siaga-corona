@@ -1,4 +1,5 @@
 # siaga-corona
+This is an open source project. Feel free to contribute!
 
 ## Project setup
 ```
