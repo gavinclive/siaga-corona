@@ -30,6 +30,18 @@ export default {
   data: () => ({
     activeItem: 0
   }),
+
+  mounted () {
+    this.checkRoute()
+  },
+
+  methods: {
+    checkRoute () {
+      if (window.location.href.includes('news')) this.activeItem = 1
+      else if (window.location.href.includes('more')) this.activeItem = 2
+      else if (window.location.href.includes('about')) this.activeItem = 3
+    }
+  },
 }
 </script>
 
